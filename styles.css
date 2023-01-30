@@ -1,20 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap');
+
+*{
+	--bgMain:hsl(233, 47%, 7%);  /* Very dark blue (main background):*/
+	--bgCard: hsl(244, 38%, 16%); /* Dark desaturated blue (card background)*/
+	--accentclr:hsl(277, 64%, 61%); /* Soft violet (accent) */
+
+	--white: hsl(0, 0%, 100%); /* (main heading, stats): */
+	--white-2: hsla(0, 0%, 100%, 0.75); /* Slightly transparent white (main paragraph) */
+	--white-3: hsla(0, 0%, 100%, 0.6); /* Slightly transparent white (stat headings) */
+
+	--font-size: 15px;
+	--font-family-1: "Inter"; /* - Weights: 400, 700 */
+	--font-family-2: "Lexend Deca"; /* - Weights: 400 */
+
+}
+
 body{
-	background-color:rgb(0,0,16);
+	min-height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	background-color:var(--bgMain);
 	color:#fff;
-	font-family:roboto;
+	font-family: "Lexend Deca";
 }
 
 .ctn-main{
-	background:#140525;
+	background-color: var(--bgCard);
 	display:flex;
 	flex-direction:row;
 	justify-content:center;
-	margin: 0 7.5rem ;
+	margin: 0 8.5rem ;
+	border-radius: 1rem;
 }
 
+/**********  Ctn 1 | Main Contn.  **********/
 .ctn-1{
 	display:flex;
+	flex-direction:column;
+	justify-content:start;
+	margin: 1.5rem 3.5rem;
+	
+	width: 400px;
+}
+
+.ctn-1 > div{
+	margin-bottom: 0;
+	margin-right: 2rem;
+	margin-top: 2rem;
+	padding-right: 2rem;
+
+
+	display:flex;
 	flex-direction:row;
-	justify-content:center;
-	margin: 0 7.5rem ;
+	/* justify-content:center; */
+	/* padding: 0 4.5rem ; */
+}
+
+
+/**********  Ctn 1 | Header Text  -- Row 1 **********/
+.title > p  {
+	font-size: 1.8rem;
+	font-weight: 700;
+}
+
+.title > p > span {
+	color: var(--accentclr);
+}
+
+
+/**********  Ctn 1 | Info. Text  -- Row 2 **********/
+.info{
+	font-family: var(--font-family-1);
+	font-weight: 400;
+	font-size: 0.9rem;
+	word-spacing: 0.15rem;
+}
+
+p {
+	margin: 0;
+	padding: 0;
+}
+
+
+/**********  Ctn 1 | Info. Text  -- Row 3 **********/
+.sub-ctn:first-child{
+	margin: 0;
+}
+
+.sub-ctn{
+	margin-left: 3rem;
+}
+
+.sub-ctn > p:first-of-type{
+	font-weight: 700;
+	font-size: 1.25rem;
+}
+
+.sub-text{
+	margin: 0.25rem 0 ;
+}
+
+
+
+/**********  <----- Ctn 2 ----->   **********/
+
+
+/**********  Ctn 2 |   **********/
+.ctn-img{
+	height: 100%;
+}
+
+img{
+	position: relative;
+	display: inline-block;
+	width: 28.71rem !important; /* Modify This */ 
 }
