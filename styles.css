@@ -22,21 +22,27 @@ p {
 
 body{
 	min-height: 100vh;
-	display: flex;
 	align-items: center;
 	justify-content: center;
 
 	background-color:var(--bgMain);
-	color:#fff;
-	font-family: "Lexend Deca";
+	color:var(--white);
+	font-family: var(--font-family-1);
 
 	overflow: hidden;
 }
 
+body, .ctn-main, .ctn-1, .ctn-1 > div{
+	display: flex;
+}
+
+
+.ctn-main, .ctn-1 > div{
+	flex-direction: row;
+}
+
 .ctn-main{
 	background-color: var(--bgCard);
-	display:flex;
-	flex-direction:row;
 	justify-content:center;
 	margin: 0 8.5rem ;
 	border-radius: 1rem;
@@ -44,11 +50,9 @@ body{
 
 /**********  Ctn 1 | Main Contn.  **********/
 .ctn-1{
-	display:flex;
 	flex-direction:column;
 	justify-content:start;
 	margin: 2.25rem 3.5rem;
-	
 	width: 350px;
 }
 
@@ -56,16 +60,11 @@ body{
 	width: 95%;
 	margin-bottom: 0;
 	margin-top: 2rem;
-	/* padding-right: 1.2rem; */
-
-	display:flex;
-	flex-direction:row;
 }
-
 
 /**********  Ctn 1 | Header Text  -- Row 1 **********/
 .title > p  {
-	font-size: 1.8rem;
+	font-size: 1.9rem;
 	font-weight: 700;
 }
 
@@ -76,10 +75,11 @@ body{
 
 /**********  Ctn 1 | Info. Text  -- Row 2 **********/
 .info{
-	font-family: var(--font-family-1);
 	font-weight: 400;
-	font-size: 0.9rem;
+	font-size: 0.92rem;
 	word-spacing: 0.15rem;
+	line-height: 1.3rem;
+	color: var(--white-2);
 }
 
 
@@ -95,21 +95,51 @@ body{
 .sub-ctn > p:first-of-type{
 	font-weight: 700;
 	font-size: 1.25rem;
+	color: var(--white);
 }
 
 .sub-text{
 	margin: 0.25rem 0;
+	color: var(--white-3);
+	text-transform: uppercase;
 }
 
 
 
 /**********  <----- Ctn 2 ----->   **********/
 
-
 /**********  Ctn 2 |   **********/
-img{
-	position: relative;
-	display: block;
+
+.ctn-overlay, .ctn-img{
+	width: 540px;
+	height: 400px;
+	position: relative; 
+	margin: 0;
+}
+
+.ctn-overlay{
+	z-index: 2;
+	background-color: rgb(78 0 125 / 57%);;
+}
+
+.ctn-overlay::after,
+.ctn-img::after{
+	content: '';
+	background-size: cover;
+	width: 100%;
+	height: 100%;
+}
+
+.ctn-overlay,
+.ctn-img::after{
 	border-radius: 0 4% 4% 0;
-	width: 30rem !important;
+}
+
+.ctn-overlay,
+.ctn-img::after{
+	position: absolute;
+}
+
+.ctn-img::after{
+	background: url(images/image-header-desktop.jpg) no-repeat center center;
 }

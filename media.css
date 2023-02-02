@@ -1,0 +1,74 @@
+@media screen and (max-width: 1024px) {
+  body {
+    overflow: auto;
+  }
+
+  .ctn-main, 
+  .ctn-1, 
+  .ctn-1 > div{
+    align-items: center;
+  }
+
+  .ctn-main{
+    flex-direction: column-reverse;
+  }
+
+/**********  <----- Ctn 1 ----->   **********/
+  /**********  Ctn 1 | Main Contn.  **********/
+  .ctn-1{
+    margin: 2rem 0 5rem;
+    width: 520px;
+  }
+
+  .ctn-1 > div{
+    flex-direction: column;
+  }
+
+  .title,
+  .info,
+  .sub-text{
+    text-align: center;
+  }
+
+  /**********  Ctn 1 | Header Text  -- Row 1 **********/
+  .title > p{
+    font-size: 3rem !important;
+  }
+
+  /**********  Ctn 1 | Info. Text  -- Row 2 **********/
+  .info{
+    font-size: 1.6rem;
+    word-spacing: 0.35rem;
+    line-height: 2.4rem;
+  }
+
+  /**********  Ctn 1 | Info. Text  -- Row 3 **********/
+  .sub-ctn{
+    margin: 1.15rem 0 ;
+  }
+
+  .sub-ctn > p:first-of-type{
+    font-size: 2.55rem;
+  }
+
+  .sub-text{
+    font-size: 1.5rem;
+  }
+
+/**********  <----- Ctn 2 ----->   **********/
+  /**********  Ctn 2 |   **********/
+
+  .ctn-img::after{
+    background: url(images/image-header-mobile.jpg) no-repeat center center;
+  }
+
+  .ctn-overlay, .ctn-img{
+    width: 653.997px;
+    height: 480px;
+  }
+
+  .ctn-overlay,
+  .ctn-img::after{
+    border-radius: 1.25% 1.25% 0 0;
+  }
+}
