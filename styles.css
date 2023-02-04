@@ -9,7 +9,7 @@
 	--white-2: hsla(0, 0%, 100%, 0.75); /* Slightly transparent white (main paragraph) */
 	--white-3: hsla(0, 0%, 100%, 0.6); /* Slightly transparent white (stat headings) */
 
-	--font-size: 15px;
+	--font-size: 15px; /* - Weights: 400, 700 */
 	--font-family-1: "Inter"; /* - Weights: 400, 700 */
 	--font-family-2: "Lexend Deca"; /* - Weights: 400 */
 
@@ -28,38 +28,46 @@ body{
 	background-color:var(--bgMain);
 	color:var(--white);
 	font-family: var(--font-family-1);
+	font-size: var(--font-size) !important;
 
 	overflow: hidden;
 }
 
-body, .ctn-main, .ctn-1, .ctn-1 > div{
+body, 
+.ctn-main, 
+.ctn-1, .ctn-1 > div{
 	display: flex;
 }
 
-
-.ctn-main, .ctn-1 > div{
+.ctn-main, 
+.ctn-1 > div{
 	flex-direction: row;
 }
 
 .ctn-main{
 	background-color: var(--bgCard);
-	justify-content:center;
+	justify-content: center;
 	margin: 0 8.5rem ;
-	border-radius: 1rem;
+	border-radius: 1.25rem;
+	box-shadow: 0 4px 8px 0 hsla(0, 0%, 0%, 0.2), 
+	0 6px 20px 0  hsla(0, 0%, 0%, 0.2);
 }
 
 /**********  Ctn 1 | Main Contn.  **********/
 .ctn-1{
-	flex-direction:column;
-	justify-content:start;
+	flex-direction: column;
+	justify-content: start;
 	margin: 2.25rem 3.5rem;
-	width: 350px;
+	width: 335px; /* Ctn 1 Contents | Size */ 
 }
 
 .ctn-1 > div{
-	width: 95%;
-	margin-bottom: 0;
-	margin-top: 2rem;
+	/* width: 100%; */
+	margin: 2.85rem 0 0;
+}
+
+.ctn-1 > div:nth-child(2){
+	margin-top: 1.25rem;
 }
 
 /**********  Ctn 1 | Header Text  -- Row 1 **********/
@@ -72,54 +80,57 @@ body, .ctn-main, .ctn-1, .ctn-1 > div{
 	color: var(--accentclr);
 }
 
-
 /**********  Ctn 1 | Info. Text  -- Row 2 **********/
 .info{
 	font-weight: 400;
-	font-size: 0.92rem;
-	word-spacing: 0.15rem;
+	font-size: 0.875rem;
+	letter-spacing: 0.45px;
+	word-spacing: 0.3px;
 	line-height: 1.3rem;
 	color: var(--white-2);
 }
 
 
 /**********  Ctn 1 | Info. Text  -- Row 3 **********/
+.sub-ctn{
+	margin-left: 2.72rem;
+}
+
 .sub-ctn:first-child{
 	margin: 0;
 }
 
-.sub-ctn{
-	margin-left: 3rem;
-}
-
-.sub-ctn > p:first-of-type{
-	font-weight: 700;
-	font-size: 1.25rem;
-	color: var(--white);
-}
-
 .sub-text{
-	margin: 0.25rem 0;
+	margin: 2.5px 0;
+}
+
+.sub-text:first-child{
+	color: var(--white);
+	font-weight: 600;
+	font-size: 1.4rem;
+}
+
+.sub-text:last-child{
 	color: var(--white-3);
+	font-size: 0.75rem;
+	letter-spacing: 1.5px;
 	text-transform: uppercase;
 }
 
 
-
 /**********  <----- Ctn 2 ----->   **********/
-
-/**********  Ctn 2 |   **********/
+/**********  Ctn 2 | Image Section  **********/
 
 .ctn-overlay, .ctn-img{
 	width: 540px;
 	height: 400px;
-	position: relative; 
 	margin: 0;
+	position: relative; 
 }
 
 .ctn-overlay{
+	background-color: hsla(277, 100%, 24.5%, 0.57);
 	z-index: 2;
-	background-color: rgb(78 0 125 / 57%);;
 }
 
 .ctn-overlay::after,
@@ -132,7 +143,7 @@ body, .ctn-main, .ctn-1, .ctn-1 > div{
 
 .ctn-overlay,
 .ctn-img::after{
-	border-radius: 0 4% 4% 0;
+	border-radius: 0 1.25rem 1.25rem 0;
 }
 
 .ctn-overlay,

@@ -11,6 +11,7 @@
 
   .ctn-main{
     flex-direction: column-reverse;
+    border-radius: 1.5rem;
   }
 
 /**********  <----- Ctn 1 ----->   **********/
@@ -32,26 +33,28 @@
 
   /**********  Ctn 1 | Header Text  -- Row 1 **********/
   .title > p{
-    font-size: 3rem !important;
+    font-size: 3rem;
   }
 
   /**********  Ctn 1 | Info. Text  -- Row 2 **********/
   .info{
     font-size: 1.6rem;
     word-spacing: 0.35rem;
-    line-height: 2.4rem;
+    line-height: 2.25rem;
+    letter-spacing: 0.6px;
+    word-spacing: 0.5px;
   }
 
   /**********  Ctn 1 | Info. Text  -- Row 3 **********/
   .sub-ctn{
-    margin: 1.15rem 0 ;
+    margin: 2.75rem 0 0;
   }
 
-  .sub-ctn > p:first-of-type{
+  .sub-text:first-child{
     font-size: 2.55rem;
   }
 
-  .sub-text{
+  .sub-text:last-child{
     font-size: 1.5rem;
   }
 
@@ -63,12 +66,12 @@
   }
 
   .ctn-overlay, .ctn-img{
-    width: 653.997px;
+    width: 655px;
     height: 480px;
   }
-
+  
   .ctn-overlay,
   .ctn-img::after{
-    border-radius: 1.25% 1.25% 0 0;
+    border-radius: 3.5% 3.5% 0 0;
   }
 }
