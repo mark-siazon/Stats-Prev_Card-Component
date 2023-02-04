@@ -48,7 +48,7 @@ body,
 	background-color: var(--bgCard);
 	justify-content: center;
 	margin: 0 8.5rem ;
-	border-radius: 1.25rem;
+	border-radius: 1.05rem;
 	box-shadow: 0 4px 8px 0 hsla(0, 0%, 0%, 0.2), 
 	0 6px 20px 0  hsla(0, 0%, 0%, 0.2);
 }
@@ -143,7 +143,7 @@ body,
 
 .ctn-overlay,
 .ctn-img::after{
-	border-radius: 0 1.25rem 1.25rem 0;
+	border-radius: 0 1.05rem 1.05rem 0;
 }
 
 .ctn-overlay,
