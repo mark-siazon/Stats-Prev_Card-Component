@@ -1,4 +1,4 @@
-# Frontend Mentor - Stats Preview Card Component (Solution)
+# Frontend Mentor - Stats Preview Card Component
 
 This is a solution to the [Stats preview card component challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/stats-preview-card-component-8JqbgoU62). <br>
 Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
@@ -15,6 +15,7 @@ Frontend Mentor challenges help you improve your coding skills by building reali
   - [Continued development](#continued-development)
 - [Author](#author)
 - [Acknowledgments](#acknowledgments)
+- [Feedback/Suggestions](#feedback--suggestions)
 - [Notes](#notes)
 
 
@@ -131,10 +132,59 @@ This code snippets/function, is what **I struggled and took time to solve**:
 - I am grateful for my friends and to those who motivate me push through and not settle in relaxation. 
 - I hope that this website serves its intended purpose. Thank you!
 
+## Feedback & Suggestions:
+### Auto-Generated Report:
+- Accessibility Report 
+  - Section lacks heading. Consider using `h2`- `h6` elements to add identifying headings to all sections.
+  - ```html
+    <div>
+      <section class="sub-ctn"></section>
+    </div>
+    ```
+- HTML Validation
+  - Page should contain a level-one heading 
+  - `<html lang="en">`
+
+<br>
+
+### Community Feedback:
+- **David Gichuru** • 170 [_(@dxiDavid)_](https://github.com/dxiDavid)
+  - Make sure the title or main heading is contained in the `<h1> </h1>` tags 
+    - to get rid of those warnings and improve accessibility then adjust the font size to fit the design.
+  - As for the overlay, since there's no fancy animation going on in this situation, 
+    - Just put the image in a div, set the background color to that overlay color, and then slightly reduce the opacity of the image.
+    - ```html
+      <div class="ctn-img">
+        <img src="./images/image-header-desktop.jpg" alt="people in an office">
+      </div>
+      ```
+    - ```css
+      .ctn-img {
+        background-color: hsla(277, 100%, 24.5%, 0.57);
+      }
+
+      .ctn-image > img{
+        filter:brightness(40%)
+        filter:opacity(40%);
+      }
+      ```
+
+<br>
+
+  - You could also play around with other filters like brightness and saturation to get closer to the design. 
+  - This will save you several lines of CSS code and markup. 
+  - Just make sure the image fits in the div and you should be good.
+
+<br>
+
+### Next Action (Soon):
+- [ ] Implement changes from community feedback
+- [ ] TBA...
+
 ## Notes:
 - I would be happy to recieve comments, criticism, and such that could improve the website:
   - Better way of doing this website
   - Cleaner Code
   - Better Practice/Approach of making this website.
 - Feel free to approach and contact me :>
-- _Finished Feb 4, 2022_
+- _Finished Feb 4, 2022_ & _Updated Feb 12, 2023_
